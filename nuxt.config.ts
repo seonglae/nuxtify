@@ -1,50 +1,46 @@
 import dotenv from 'dotenv'
 import colors from 'vuetify/es5/util/colors'
+import pkg from './package.json'
 import type { NuxtConfig } from '@nuxt/types'
 
-dotenv.config()
-process.env.NODE_ENV === 'production' ? (process.env.dev = '') : (process.env.dev = '1')
-process.env.title = 'Nuxt TS Template'
+const TITLE: string = 'Nuxt TS Template'
+const HOST: string = 'https://example.com'
+const LANG: string = 'en'
+const PORT: number = 8080
+const KEYWORKDS: Array<string> = ['typescript', 'template', 'nuxt']
+const PRODUCTION: string = 'production'
 
+dotenv.config()
 const config: NuxtConfig = {
-  // Project
+  // Project Config
   srcDir: 'src/',
   target: 'static',
   plugins: [{ src: '~/plugins/init/config', ssr: false }],
-  components: true,
   buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify'],
   modules: ['@nuxtjs/axios', '@nuxtjs/pwa', '@nuxtjs/sitemap'],
 
-  // Application
-  vue: { config: { productionTip: false, devtools: Boolean(process.env.dev) } },
-  loading: { color: '#424242' },
-  server: {
-    port: process.env.PORT || 8080,
-    host: '0.0.0.0',
-  },
-  env: { dev: process.env.dev, title: process.env.title },
-  pwa: { manifest: { lang: 'en' } },
+  // Application Config
+  components: true,
+  vue: { config: { productionTip: false, devtools: process.env.NODE_ENV === PRODUCTION } },
+  loading: { color: colors.grey.base },
+  server: { port: process.env.PORT || PORT, host: '0.0.0.0' },
+  env: { title: TITLE, name: pkg.name },
+  pwa: { manifest: { lang: LANG } },
 
-  // Head
+  // Head with SEO
   head: {
-    title: process.env.title,
+    title: TITLE,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      {
-        hid: 'keywords',
-        name: 'keywords',
-        content: 'typescript, template, nuxt',
-      },
+      { hid: 'description', name: 'description', content: pkg.description },
+      { hid: 'keywords', name: 'keywords', content: KEYWORKDS.join() },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }],
   },
-  sitemap: {
-    hostname: 'https://example.com'
-  },
+  sitemap: { hostname: HOST },
 
-  // Theme
+  // Vuetify Theme
   vuetify: {
     defaultAssets: { icons: 'fa' },
     theme: {
@@ -63,7 +59,7 @@ const config: NuxtConfig = {
     },
   },
 
-  // Build
+  // Build Options
   build: {
     devMiddleware: {
       headers: {

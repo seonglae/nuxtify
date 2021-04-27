@@ -4,10 +4,10 @@
       <h1 class="title">
         {{ error.statusCode }}
       </h1>
-      <h2 class="subtitle">
+      <h2 class="subtitle pb-3">
         {{ error.message }}
       </h2>
-      <v-btn to="/"> Home page </v-btn>
+      <v-btn to="/"> Home </v-btn>
       <br />
       <br />
     </div>
@@ -15,7 +15,9 @@
 </template>
 
 <script lang="ts">
-export default {
+import Vue from 'vue'
+
+export default Vue.extend({
   props: {
     error: {
       type: Object,
@@ -27,58 +29,43 @@ export default {
       pageNotFound: '404 Not Found',
       serverError: 'Internal Server Error',
       otherError: 'An error occurred',
-      title: '',
     }
   },
+  computed: {
+    title(): string {
+      switch (this.error.statusCode) {
+        case 404:
+          return this.pageNotFound
+        case 500:
+          this.serverError
+        default:
+          return this.otherError
+      }
+    },
+  },
   head(): { title: string } {
-    switch (this.error.statusCode) {
-      case 404:
-        this.title = this.pageNotFound
-        break
-      case 500:
-        this.title = this.serverError
-        break
-      default:
-        this.title = this.otherError
-        break
-    }
     return {
       title: this.title,
     }
   },
-}
+})
 </script>
 
 <style scoped>
 .container {
-  margin: 0 auto;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
   color: var(--light);
-  letter-spacing: 1px;
-}
-.nuxt-link-active,
-.nuxt-link-active:hover {
-  padding: 10px;
 }
 .subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  word-spacing: 5px;
+  font-weight: lighter;
+  font-size: 3rem;
   color: var(--light);
-  padding-bottom: 15px;
-}
-.links {
-  padding-top: 15px;
 }
 </style>
