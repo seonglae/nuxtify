@@ -32,7 +32,7 @@ export default Vue.extend({
     }
   },
   computed: {
-    title(): string {
+    header(): string {
       switch (this.error.statusCode) {
         case 404:
           return this.pageNotFound
@@ -45,7 +45,7 @@ export default Vue.extend({
   },
   head(): { title: string } {
     return {
-      title: this.title,
+      title: this.header,
     }
   },
 })
