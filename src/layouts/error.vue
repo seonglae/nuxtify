@@ -14,7 +14,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   props: {
     error: {
@@ -27,10 +27,10 @@ export default {
       pageNotFound: '404 Not Found',
       serverError: 'Internal Server Error',
       otherError: 'An error occurred',
-      title: undefined,
+      title: '',
     }
   },
-  head() {
+  head(): { title: string } {
     switch (this.error.statusCode) {
       case 404:
         this.title = this.pageNotFound
@@ -42,9 +42,8 @@ export default {
         this.title = this.otherError
         break
     }
-    const title = this.title
     return {
-      title,
+      title: this.title,
     }
   },
 }
