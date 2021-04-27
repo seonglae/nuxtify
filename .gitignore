@@ -1,0 +1,13 @@
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vscode
+node_modules/
+.env
+.nuxt
+dist
+log
+build
+package-lock.json
+potree
+sw.*
