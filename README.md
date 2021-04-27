@@ -1,4 +1,4 @@
-# Nuxt Typescript Template
+# Minimal Nuxt TS Template
 
 ## Get Started
 
@@ -10,14 +10,23 @@ yarn dev
 
 ## Components
 
-- Nuxt
-- Typescript
-- Prettier
+### Modules
+
 - Vuetify
 - Vuex
 - Axios
-- SEO Settings
-- Nuxt Configs
+
+### Configs
+
+- SEO Options
+- Optimize Options
+
+### Develop Tools
+
+- Prettier
+
+### Layouts
+
 - Error Page
 
 ![Error Page](image/error.png)
@@ -27,6 +36,6 @@ yarn dev
 - Atomic Design Pattern
 - Minimalism
 
-
 ## Examples
+
 - [Pointland](point.seongland.com) - [Repository](github.com/seongland/pointland)
