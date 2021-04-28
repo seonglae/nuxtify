@@ -24,6 +24,9 @@ yarn dev
 ### Develop Tools
 
 - Prettier
+- Github Action
+  - Build Pipeline - CI
+  - Github Page - CD
 
 ### Layouts
 
