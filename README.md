@@ -1,5 +1,5 @@
 # Minimal Nuxt TS Template
-
+[Demo](https://seonglae.github.io/nuxt-ts-template)
 ## Get Started
 
 ```bash
