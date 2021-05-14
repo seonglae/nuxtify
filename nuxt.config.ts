@@ -26,7 +26,7 @@ const config: NuxtConfig = {
   server: { port: process.env.PORT || PORT, host: '0.0.0.0' },
   env: { title: TITLE, name: pkg.name },
   pwa: { manifest: { lang: LANG } },
-  router: { base: `/${pkg.name}/` },
+  router: { base: process.env.BASE ? `/${pkg.name}/` : '/' },
 
   // Head with SEO
   head: {
