@@ -1,5 +1,6 @@
 # Minimal Nuxt TS Template
-[Demo](https://seonglae.github.io/nuxtify)
+[Github Action Demo](https://seonglae.github.io/nuxtify)
+[Vercel Demo](https://nuxtify.vercel.app)
 ## Get Started
 
 ```bash
