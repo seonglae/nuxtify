@@ -11,12 +11,18 @@ yarn dev
 ```
 
 ## Components
+- Toast Snackbar
+- Loading
+- Error Page
 
+![Error Page](image/error.png)
 ### Modules
 
 - Vuetify
 - Vuex
 - Axios
+- Vue Composition API
+
 
 ### Configs
 
@@ -25,16 +31,11 @@ yarn dev
 
 ### Develop Tools
 
+- nodemon
 - Prettier
 - Github Action
   - Build Pipeline - CI
   - Github Page - CD
-
-### Layouts
-
-- Error Page
-
-![Error Page](image/error.png)
 
 ## Philosophy
 
