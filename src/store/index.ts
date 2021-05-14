@@ -1,3 +1,16 @@
-export const state = () => ({})
+export type State = {
+  loading: boolean
+}
 
-export const mutations = {}
+export const state = (): State => ({
+  loading: false,
+})
+
+export const mutations = {
+  setLoading(state: State, value: boolean) {
+    /**
+     * @summary - set global loading state
+     */
+    state.loading = value
+  },
+}
