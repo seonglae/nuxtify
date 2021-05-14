@@ -6,7 +6,7 @@ import type { NuxtConfig } from '@nuxt/types'
 const TITLE: string = 'Nuxt TS Template'
 const HOST: string = 'https://example.com'
 const LANG: string = 'en'
-const PORT: number = 8080
+const PORT: number = 3000
 const KEYWORKDS: Array<string> = ['typescript', 'template', 'nuxt']
 const PRODUCTION: string = 'production'
 
@@ -16,8 +16,9 @@ const config: NuxtConfig = {
   srcDir: 'src/',
   target: 'static',
   plugins: [{ src: '~/plugins/init/config', ssr: false }],
-  buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify'],
-  modules: ['@nuxtjs/axios', '@nuxtjs/pwa', '@nuxtjs/sitemap'],
+  buildModules: ['@nuxt/typescript-build', ['@nuxtjs/vuetify', { treeshake: true }], '@nuxtjs/composition-api/module'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/sitemap'],
+  store: true,
 
   // Application Config
   components: true,
