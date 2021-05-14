@@ -9,6 +9,7 @@ const LANG: string = 'en'
 const PORT: number = 3000
 const KEYWORKDS: Array<string> = ['typescript', 'template', 'nuxt']
 const PRODUCTION: string = 'production'
+const FAVICON: string = 'favicon.svg'
 
 dotenv.config()
 const config: NuxtConfig = {
@@ -38,7 +39,7 @@ const config: NuxtConfig = {
       { hid: 'description', name: 'description', content: pkg.description },
       { hid: 'keywords', name: 'keywords', content: KEYWORKDS.join() },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: process.env.BASE ? `/${pkg.name}/favicon.svg` : '/favicon.svg' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: process.env.BASE ? `/${pkg.name}/${FAVICON}` : `/${FAVICON}` }],
   },
   sitemap: { hostname: HOST },
 
