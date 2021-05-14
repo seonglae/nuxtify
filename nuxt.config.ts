@@ -38,7 +38,7 @@ const config: NuxtConfig = {
       { hid: 'description', name: 'description', content: pkg.description },
       { hid: 'keywords', name: 'keywords', content: KEYWORKDS.join() },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: process.env.BASE ? `/${pkg.name}/favicon.svg` : '/favicon.svg' }],
   },
   sitemap: { hostname: HOST },
 
