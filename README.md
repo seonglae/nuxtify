@@ -1,9 +1,9 @@
 # Minimal Nuxt TS Template
-[Demo](https://seonglae.github.io/nuxt-ts-template)
+[Demo](https://seonglae.github.io/nuxtify)
 ## Get Started
 
 ```bash
-git clone https://github.com/seonglae/nuxt-ts-template
+git clone https://github.com/seonglae/nuxtify
 yarn
 yarn dev
 ```
