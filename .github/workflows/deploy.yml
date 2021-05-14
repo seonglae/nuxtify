@@ -27,7 +27,7 @@ jobs:
         run: yarn
 
       - name: Make Static folder
-        run: yarn generate
+        run: yarn gh
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
