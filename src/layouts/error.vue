@@ -16,32 +16,29 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { defineComponent, computed } from '@vue/composition-api'
 
-export default Vue.extend({
+export default defineComponent({
   props: {
     error: {
       type: Object,
-      default: null,
+      default: String,
+      statusCode: Number,
     },
   },
-  data() {
-    return {
-      pageNotFound: '404 Not Found',
-      serverError: 'Internal Server Error',
-      otherError: 'An error occurred',
-    }
-  },
-  computed: {
-    header(): string {
-      switch (this.error.statusCode) {
+  setup(props, context) {
+    const error = props.error
+    const header = computed((): string => {
+      switch (error.statusCode) {
         case 404:
-          return this.pageNotFound
+          return '404 Not Found'
         case 500:
-          this.serverError
+          return 'Internal Server Error'
         default:
-          return this.otherError
+          return 'An error occurred'
       }
-    },
+    })
+    return { header }
   },
   head(): { title: string } {
     return {
