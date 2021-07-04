@@ -10,8 +10,6 @@
             <v-spacer />
             <v-btn href="https://twitter.com/SeonglaeC">TWITTER</v-btn>
             <v-spacer />
-            <v-btn href="/error">ERROR</v-btn>
-            <v-spacer />
             <v-btn @click="load">LOAD</v-btn>
           </v-toolbar>
         </v-card>
@@ -21,13 +19,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from '@vue/composition-api'
+import { defineComponent } from '@vue/composition-api'
 import { useStore } from '@nuxtjs/composition-api'
 
 import type { State } from '../store/'
 
 export default defineComponent({
-  setup(props, context) {
+  setup() {
     const store = useStore<State>()
     const load = () => {
       store.commit('setLoading', true)
