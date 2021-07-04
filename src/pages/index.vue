@@ -10,6 +10,8 @@
             <v-spacer />
             <v-btn href="https://twitter.com/SeonglaeC">TWITTER</v-btn>
             <v-spacer />
+            <v-btn @click="() => $toast.show('Successful Toast')">TOAST</v-btn>
+            <v-spacer />
             <v-btn @click="load">LOAD</v-btn>
           </v-toolbar>
         </v-card>
@@ -35,3 +37,5 @@ export default defineComponent({
   },
 })
 </script>
+
+<style src="~/assets/default.css">
