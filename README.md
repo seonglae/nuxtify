@@ -15,7 +15,15 @@ yarn dev
 - Loading
 - Error Page
 
+### Desktop View
+![Desktop View](image/desktop.png)
+
+### Mobile View
+![Mobile View](image/mobile.png)
+
+### Error View
 ![Error Page](image/error.png)
+
 ### Modules
 
 - Vuetify
