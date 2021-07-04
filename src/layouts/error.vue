@@ -15,7 +15,6 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 import { defineComponent, computed } from '@vue/composition-api'
 
 export default defineComponent({
@@ -26,7 +25,7 @@ export default defineComponent({
       statusCode: Number,
     },
   },
-  setup(props, context) {
+  setup(props) {
     const error = props.error
     const header = computed((): string => {
       switch (error.statusCode) {
