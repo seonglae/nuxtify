@@ -21,7 +21,7 @@ import { useStore } from '@nuxtjs/composition-api'
 import type { State } from '../store/'
 
 export default defineComponent({
-  setup(props, context) {
+  setup() {
     const store = useStore<State>()
     const loading = computed(() => store.state.loading)
     return { loading }
