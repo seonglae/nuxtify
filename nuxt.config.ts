@@ -18,7 +18,7 @@ const config: NuxtConfig = {
   target: 'static',
   plugins: [{ src: '~/plugins/init/config', ssr: false }],
   buildModules: ['@nuxt/typescript-build', ['@nuxtjs/vuetify', { treeshake: true }], '@nuxtjs/composition-api/module'],
-  modules: ['@nuxtjs/axios', '@nuxtjs/sitemap'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/sitemap', '@nuxtjs/toast'],
   store: true,
 
   // Application Config
@@ -61,6 +61,7 @@ const config: NuxtConfig = {
       },
     },
   },
+  toast: { position: 'bottom-center', duration: 2000, keepOnHover: true },
 
   // Build Options
   build: {
