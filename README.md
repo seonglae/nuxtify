@@ -1,4 +1,5 @@
 # Minimal Nuxt TS Template
+
 - [Github Action Demo](https://seonglae.github.io/nuxtify)
 - [Vercel Demo](https://nuxtify.vercel.app)
 
@@ -11,17 +12,21 @@ yarn dev
 ```
 
 ## Components
+
 - Toast Snackbar
 - Loading
 - Error Page
 
 ### Desktop View
+
 ![Desktop View](image/desktop.png)
 
 ### Mobile View
+
 ![Mobile View](image/mobile.png)
 
 ### Error View
+
 ![Error Page](image/error.png)
 
 ### Modules
@@ -30,7 +35,6 @@ yarn dev
 - Vuex
 - Axios
 - Vue Composition API
-
 
 ### Configs
 
@@ -52,4 +56,5 @@ yarn dev
 
 ## Examples
 
-- [Pointland](point.seongland.com) - [Repository](github.com/seongland/pointland)
+- [Pointland](point.seongland.com) -
+  [Repository](github.com/seongland/pointland)
