@@ -11,7 +11,7 @@
     "gh": "cross-env NODE_ENV=production BASE=nuxtify nuxt generate"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.1",
+    "@fortawesome/fontawesome-free": "^6.0.0",
     "@nuxtjs/axios": "^5.13.1",
     "@nuxtjs/composition-api": "^0.23.4",
     "@nuxtjs/sitemap": "^2.4.0",
