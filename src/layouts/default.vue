@@ -6,12 +6,6 @@
     <v-overlay :value="$store.state.loading">
       <v-progress-circular indeterminate size="64" />
     </v-overlay>
-    <div
-      id="g_id_onload"
-      data-client_id="60200972707-fis67eoi3rk1c0naig3to50av1smm5jm.apps.googleusercontent.com"
-      data-login_uri="https://localhost:3000/oauth/google/callback"
-      data-context="use"
-    />
   </v-app>
 </template>
 
