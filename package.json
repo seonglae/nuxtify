@@ -26,7 +26,7 @@
     "@nuxtjs/vuetify": "^1.11.3",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.0",
-    "nodemon": "^1.18.9",
+    "nodemon": "^2.0.15",
     "prettier": "^2.2.1"
   },
   "nodemonConfig": {
