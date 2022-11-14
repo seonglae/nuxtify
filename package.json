@@ -11,23 +11,23 @@
     "gh": "cross-env NODE_ENV=production BASE=nuxtify nuxt generate"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.0.0",
-    "@nuxtjs/axios": "^5.13.1",
-    "@nuxtjs/composition-api": "^0.23.4",
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/composition-api": "^0.33.1",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/toast": "^3.3.1",
-    "consola": "^2.15.0",
-    "nuxt": "^2.15.3",
+    "consola": "^2.15.3",
+    "nuxt": "^2.15.8",
     "vuex-module-decorators": "^2.0.0"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.15.4",
+    "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/vuetify": "^1.11.3",
+    "@nuxtjs/vuetify": "^1.12.3",
     "cross-env": "^7.0.3",
-    "dotenv": "^16.0.0",
-    "nodemon": "^2.0.15",
-    "prettier": "^2.2.1"
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1"
   },
   "nodemonConfig": {
     "watch": [
